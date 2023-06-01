@@ -188,7 +188,8 @@ async function generateEmbeddings({
 
         try {
           const configuration = new Configuration({
-            apiKey: openaiKey
+            apiKey: openaiKey,
+            basePath: "https://openai.api2d.net/v1".replace(/\/+$/, "")
           })
           const openai = new OpenAIApi(configuration)
 
