@@ -58777,7 +58777,8 @@ function generateEmbeddings({ shouldRefresh = false, supabaseUrl, supabaseServic
                     const input = content.replace(/\n/g, ' ');
                     try {
                         const configuration = new dist.Configuration({
-                            apiKey: openaiKey
+                            apiKey: openaiKey,
+                            basePath: 'https://openai.api2d.net/v1'
                         });
                         const openai = new dist.OpenAIApi(configuration);
                         const embeddingResponse = yield openai.createEmbedding({
